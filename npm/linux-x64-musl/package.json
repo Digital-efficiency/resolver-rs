@@ -1,0 +1,23 @@
+{
+  "name": "@de/resolver-rs-linux-x64-musl",
+  "version": "0.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "resolver-rs.linux-x64-musl.node",
+  "files": [
+    "resolver-rs.linux-x64-musl.node"
+  ],
+  "description": "a resolver with rust",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": "git@github.com:Digital-efficiency/resolver-rs.git",
+  "libc": [
+    "musl"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@de/resolver-rs-linux-riscv64-gnu",
+  "version": "0.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "riscv64"
+  ],
+  "main": "resolver-rs.linux-riscv64-gnu.node",
+  "files": [
+    "resolver-rs.linux-riscv64-gnu.node"
+  ],
+  "description": "a resolver with rust",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": "git@github.com:Digital-efficiency/resolver-rs.git",
+  "libc": [
+    "glibc"
+  ]
+}

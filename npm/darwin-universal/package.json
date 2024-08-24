@@ -1,0 +1,17 @@
+{
+  "name": "@de/resolver-rs-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "resolver-rs.darwin-universal.node",
+  "files": [
+    "resolver-rs.darwin-universal.node"
+  ],
+  "description": "a resolver with rust",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": "git@github.com:Digital-efficiency/resolver-rs.git"
+}
