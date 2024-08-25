@@ -14,16 +14,12 @@ impl Resolver {
 
   pub fn resolve(&self, package_name: &str) -> Option<PackageInfo> {
     let mut current_dir = self.base_dir.clone();
-
     loop {
       let node_modules = current_dir.join("node_modules");
       let package_dir = node_modules.join(package_name);
-
       if package_dir.is_dir() {
         return self.get_package_info(&package_dir, package_name);
       }
-
-      // 处理 @org/package 形式的包名
       if package_name.starts_with('@') {
         let parts: Vec<&str> = package_name.split('/').collect();
         if parts.len() == 2 {
@@ -33,12 +29,9 @@ impl Resolver {
           }
         }
       }
-
-      // 向上一级目录移动
       if let Some(parent) = current_dir.parent() {
         current_dir = parent.to_path_buf();
       } else {
-        // 已经到达文件系统根目录，未找到包
         return None;
       }
     }
@@ -56,7 +49,10 @@ impl Resolver {
             json["keywords"].as_array()
                 .map(|arr| arr.iter().filter_map(|v| v.as_str().map(String::from)).collect())
                 .unwrap_or_else(Vec::new),
-            package_dir.to_path_buf()
+            package_dir.to_path_buf(),
+            json["homepage"].as_str().unwrap_or("").to_string(),
+            json["license"].as_str().unwrap_or("").to_string(),
+            json["author"].as_str().unwrap_or("").to_string()
           ));
         }
       }

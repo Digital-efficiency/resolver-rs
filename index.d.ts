@@ -9,5 +9,8 @@ export interface PackageInfo {
   description: string
   keywords: Array<string>
   path: string
+  homepage: string
+  license: string
+  author: string
 }
 export declare function resolve(packageName: string): PackageInfo | null
