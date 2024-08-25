@@ -1,4 +1,4 @@
-# resolver-rs
+# resolver-rs [![CI](https://github.com/Digital-efficiency/resolver-rs/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/Digital-efficiency/resolver-rs/actions/workflows/CI.yml)
 
 resolver-rs 是一个高效的本地模块解析器，可以根据包名快速获取本地模块的信息。
 
