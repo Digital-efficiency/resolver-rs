@@ -45,9 +45,5 @@
   },
   "repository": "git@github.com:Digital-efficiency/resolver-rs.git",
   "description": "a resolver with rust",
-  "dependencies": {
-    "@babel/core": "^7.25.2",
-    "@types/react": "^18.3.4",
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {}
 }
